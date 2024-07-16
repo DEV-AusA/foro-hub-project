@@ -3,8 +3,8 @@ package com.devausa.foro_hub_project.model;
 import com.devausa.foro_hub_project.dto.TopicDataRegister;
 import com.devausa.foro_hub_project.dto.TopicDataUpdate;
 import jakarta.persistence.*;
-        import lombok.*;
-        import org.hibernate.annotations.CreationTimestamp;
+import lombok.*;
+import org.hibernate.annotations.CreationTimestamp;
 
 import java.time.LocalDateTime;
 
