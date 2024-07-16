@@ -5,6 +5,7 @@ import com.devausa.foro_hub_project.dto.TopicDataList;
 import com.devausa.foro_hub_project.dto.TopicDataRegister;
 import com.devausa.foro_hub_project.dto.TopicDataUpdate;
 import com.devausa.foro_hub_project.model.Topic;
+import com.devausa.foro_hub_project.repository.TopicRepository;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
@@ -21,7 +22,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 public class TopicController {
 
     @Autowired
-    private TopicoRepository topicoRepository;
+    private TopicRepository topicoRepository;
 
     @PostMapping
     @Transactional
