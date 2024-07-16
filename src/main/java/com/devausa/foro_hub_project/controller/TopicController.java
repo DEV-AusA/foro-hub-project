@@ -13,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
 
@@ -43,7 +44,7 @@ public class TopicController {
     public ResponseEntity<Page<TopicDataList>> datosListaTopicos(
             @PageableDefault(size = 5, sort = {"curso"}) Pageable pageable) {
 
-        var page = topicoRepository.findAll(pageable).map(DatosListaTopico::new);
+        var page = topicoRepository.findAll(pageable).map(TopicDataList::new);
         return ResponseEntity.ok(page);
     }
 
